@@ -1,0 +1,57 @@
+.logincontainer {
+    width: 100vw;
+    height: calc(100vh - 3rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.mainlogin {
+    height: 60%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(62, 69, 86);
+    box-sizing: border-box;
+    padding: 1rem;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+}
+
+.login1 {
+
+    width: 80%;
+   margin: 1rem 0;
+    height: 15%;
+    border-radius: 9px;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+
+}
+
+.submit {
+
+    width: 40%;
+    height: 13%;
+    border: radius;
+    border-radius: 9px;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    box-sizing: border-box;
+
+}
+.submit:hover{
+    transform: scale(1.1);
+    transition: ease-in-out .4s;
+    background-color: rgb(62,69,86);
+    color: white;
+    border: 1px solid white;
+
+}

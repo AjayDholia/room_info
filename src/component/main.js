@@ -4,6 +4,8 @@ import SwitchBoard from "./switchBoard";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {useSelector,useDispatch} from 'react-redux'
 import { saveData } from "../redex/action";
+import Header from "./Header";
+import './login.css'
 const Main = () => {
   const [roomNumber, setRoomNumber] = useState();
   const [phoneNumber, setPhoneNumber] = useState();
@@ -18,43 +20,22 @@ const Main = () => {
   return (
     
     <div>
-      <Box
-        sx={{
-          padding: "2rem", 
-        }}
-      >
-        <TextField
-           sx={{
-              backgroundColor:"white",
-              botderRadius:"15px",
-              m:"1rem"
-           }}
-          id="outlined-required"
-          label="Enter Room Number"
-          type={Number}
-          disabled={isSubmit}
+      <Header/>
+      <div className ='logincontainer'>
+        <div className='mainlogin'>
+        <input type='text'  placeholder="Enter Phone No." className='login1'  disabled={isSubmit}
+          onChange={(e) => {
+            setPhoneNumber(e.target.value);
+          }}></input><br></br>
+        <input type = 'number' placeholder='Enter Room' className='login1'   disabled={isSubmit}
           //   defaultValue={0}
           onChange={(e) => {
             setRoomNumber(e.target.value);
-          }}
-        />
-        <TextField
-        sx={{
-          backgroundColor:"white",
-          botderRadius:"15px",
-          m:"1rem",
-          color:"black"
-       }}
-          id="outlined-required"
-          label="Enter Mobile Number"
-          type={Number}
-          disabled={isSubmit}
-          onChange={(e) => {
-            setPhoneNumber(e.target.value);
-          }}
-          //   defaultValue={0}
-        />
-      </Box>
+          }}></input><br></br>
+        
+       
+    </div>
+    </div>
       {isSubmit ? (
         <>
           <Box
@@ -68,21 +49,16 @@ const Main = () => {
               return <SwitchBoard idx={idx} data={data} setData={setData} />;
             })}
           </Box>
-          <Button
-            variant="contained"
-            onClick={() => {
-              
-              dispatch(saveData({userNumber:phoneNumber,data}));
-              console.log("Final Data",dataState );
-
-            }}
-          >
-            Submit
-          </Button>
+        
         </>
       ) : (
         <Button
           variant="contained"
+          className="submit"
+          sx={{    width: "15%",
+               marginLeft: "42%",
+            marginBottom: "7%",
+            marginTop: "-18%"}}
           onClick={() => {
 
             let newArray = [];
@@ -98,7 +74,7 @@ const Main = () => {
             setIsSubmit(true);
           }}
         >
-          Enter
+          sumbit
         </Button>
       )}
     </div>
