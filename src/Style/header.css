@@ -1,0 +1,27 @@
+.Nav-bar{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 5rem;
+    background-color: rgb(62,69,86);
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    
+}
+.logoAlisten{
+    height: 2rem;
+}
+.logo{
+    box-sizing: border-box;
+    width: 20vw;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
